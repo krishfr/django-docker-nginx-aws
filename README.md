@@ -51,25 +51,35 @@ Docker Compose
 AWS EC2 instance or local Linux system
 
 ### Setup and Run
-Clone the repository
+1. Clone the repository
 ```bash
 git clone https://github.com/krishfr/django-docker-nginx-aws.git
 cd django-docker-nginx-aws
 ```
-
-### Create environment file
+2. Build the app
 ```bash
-cp .env.example .env
+docker build -t notes-app .
 ```
-
+3. Run the app
+```bash
+docker run -d -p 8000:8000 notes-app:latest
+```
 ### Build and start the application
 ```bash
 docker compose up --build
 ```
-
 ### Stop the application
 ```bash
 docker compose down
+```
+### Nginx
+Install Nginx reverse proxy to make this application available
+```bash
+sudo apt-get update sudo apt install nginx
+```
+### Create environment file
+```bash
+cp .env.example .env
 ```
 
 ### What This Project Demonstrates
