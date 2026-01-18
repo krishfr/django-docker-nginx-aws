@@ -91,11 +91,3 @@ The application is intentionally simple to emphasize deployment and infrastructu
 
 ### Author
 Krish Chaudhari
-
-This project uses Django’s built-in template rendering for the user interface.
-There is no separate React frontend.
-The application is intentionally simple to emphasize deployment and infrastructure workflows.
-
-Author
-
-Krish Chaudhari
